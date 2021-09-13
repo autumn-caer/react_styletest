@@ -10,7 +10,7 @@ const App = () => {
     { text: 'Finish the course!', id: 'g2' }
   ]);
 
-  const addGoalHandler = (enteredText: any) => {
+  const addGoalHandler = (enteredText: string) => {
     setCourseGoals(prevGoals => {
       const updatedGoals = [...prevGoals];
       updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
@@ -18,7 +18,7 @@ const App = () => {
     });
   };
 
-  const deleteItemHandler = (goalId: any) => {
+  const deleteItemHandler = (goalId: string) => {
     setCourseGoals(prevGoals => {
       const updatedGoals = prevGoals.filter(goal => goal.id !== goalId);
       return updatedGoals;

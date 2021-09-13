@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 
 import Button from '../../UI/Button/Button';
 import './CourseInput.css';
+import {CourseGoalInputProps} from '../../../interface/CourseGoal'
 
-const CourseInput = (props: any) => {
+
+const CourseInput = (props: CourseGoalInputProps) => {
   const [enteredValue, setEnteredValue] = useState('');
 
-  const goalInputChangeHandler = (event: any) => {
+  const goalInputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEnteredValue(event.target.value);
   };
 
-  const formSubmitHandler = (event: any) => {
+  const formSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     props.onAddGoal(enteredValue);
   };
