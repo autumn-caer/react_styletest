@@ -4,10 +4,8 @@ import './CourseGoalItem.css';
 import {CourseGoalItemProps} from '../../../interface/CourseGoal'
 
 const CourseGoalItem = (props: CourseGoalItemProps) => {
-  // const [deleteText, setDeleteText] = useState('');
-
+  
   const deleteHandler = () => {
-    // setDeleteText('(Deleted!)');
     props.onDelete(props.id);
   };
 
