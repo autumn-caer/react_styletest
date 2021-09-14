@@ -1,12 +1,11 @@
 import React from 'react';
 
 import './CourseGoalItem.css';
+import {CourseGoalItemProps} from '../../../interface/CourseGoal'
 
-const CourseGoalItem = (props: any) => {
-  // const [deleteText, setDeleteText] = useState('');
-
+const CourseGoalItem = (props: CourseGoalItemProps) => {
+  
   const deleteHandler = () => {
-    // setDeleteText('(Deleted!)');
     props.onDelete(props.id);
   };
 

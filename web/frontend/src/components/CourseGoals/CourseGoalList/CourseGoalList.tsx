@@ -1,12 +1,13 @@
 import React from 'react';
 
 import CourseGoalItem from '../CourseGoalItem/CourseGoalItem';
+import {CourseGoalListProps, CourseGoal} from '../../../interface/CourseGoal'
 import './CourseGoalList.css';
 
-const CourseGoalList = (props: any) => {
+const CourseGoalList = (props: CourseGoalListProps) => {
   return (
     <ul className="goal-list">
-      {props.items.map((goal: any) => (
+      {props.items.map((goal: CourseGoal) => (
         <CourseGoalItem
           key={goal.id}
           id={goal.id}
